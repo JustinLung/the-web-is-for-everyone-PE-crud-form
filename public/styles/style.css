@@ -1,11 +1,67 @@
+/* GLOBAL STYLES */
+
+:root {
+  --dark-grey: #171919;
+  --white: #fff;
+}
+
 body {
-  background-color: #171919;
-  color: #fff;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/* HEADER STYLING */
+
 .logo {
   padding: 2em;
+}
+
+/* FORM STYLING */
+
+form {
+  margin: 0 auto;
+  max-width: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  text-align: center;
+  border: none;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+input {
+  font-size: 1rem;
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  color: var(--dark-grey);
+}
+
+button {
+  all: unset;
+  background-color: var(--white);
+  color: var(--dark-grey);
+  border: 1px solid var(--white);
+  padding: 0.5em 2em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
 }

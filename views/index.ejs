@@ -1,12 +1,16 @@
 <%- include('partials/header.ejs') %>
-    <h1>📚 Add category - Scrollbook API</h1>
     <form action="/" method="POST">
-        <label for="category">Category</label>
-        <input type="text" name="type" id="category" class="category" placeholder="Romance..." required>
-        <button type="submit" id="submitButton">Submit</button>
-        <p class="success-msg" id="succesMsg">Category has been inserted</p>
-        <% if(typeof message !== 'undefined') { %>
-            <p class="success-msg-ssr"><%= message %></p>
-        <% } %> 
+        <fieldset>
+            <legend>📚 Add category - Scrollbook API</legend>
+            <label for="category">Category</label>
+            <input type="text" name="type" id="category" class="category" placeholder="Romance..." required>
+            <button type="submit" id="submitButton">Submit</button>
+            <p class="success-msg" id="succesMsg">Category has been inserted</p>
+            <% if(typeof message !=='undefined' ) { %>
+                <p class="success-msg-ssr">
+                    <%= message %>
+                </p>
+                <% } %>
+        </fieldset>
     </form>
     <%- include('partials/footer.ejs') %>

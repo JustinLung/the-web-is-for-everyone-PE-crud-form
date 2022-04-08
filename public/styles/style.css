@@ -26,11 +26,15 @@ form {
   margin: auto;
 }
 
-h1 {
+legend {
   padding-bottom: 1em;
   margin: 0 auto;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+fieldset {
+  border: none;
 }
 
 @media (max-width: 35em) {

@@ -10,7 +10,7 @@ router
     })
   })
   .post('/', (req, res) => {
-    const type = req.body
+    const type = JSON.stringify(req.body)
     const options = {
       method: 'POST',
       body: type,
@@ -18,11 +18,22 @@ router
         'Content-Type': 'application/json',
       },
     }
+    console.log(options)
     fetch('https://scrollbook.api.fdnd.nl/v1/category', options)
-      .then((res) => res.json())
-      .catch((err) => {
-        console.log(err)
+      .then((response) => {
+        console.log(response)
+        return response.json()
       })
+      .then((data) => {
+        console.log(data)
+      })
+      .catch((err) => {
+        console.log('Oops, something went wrong.')
+      })
+    res.render('index', {
+      title: 'Scrollbook CRUD | Category',
+      message: 'Category has been inserted, add another one.',
+    })
   })
 
 module.exports = router

@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: var(--dark-grey);
-  color: var(--white);
+  background-color: #171919;
+  color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   padding: 0;
@@ -25,20 +25,17 @@ body {
 form {
   margin: 0 auto;
   max-width: 30em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-fieldset {
-  text-align: center;
-  border: none;
-}
-
-legend {
+h1 {
+  padding: 0;
+  margin: 0;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+main {
+  text-align: center;
 }
 
 input {
@@ -46,14 +43,14 @@ input {
   padding: 8px 10px;
   border: none;
   outline: none;
-  color: var(--dark-grey);
+  color: #171919;
 }
 
 button {
   all: unset;
-  background-color: var(--white);
-  color: var(--dark-grey);
-  border: 1px solid var(--white);
+  background-color: #fff;
+  color: #171919;
+  border: 1px solid #fff;
   padding: 0.5em 2em;
   border-radius: 0.3em;
   cursor: pointer;
@@ -62,6 +59,15 @@ button {
 
 button:hover {
   background-color: transparent;
-  color: var(--white);
-  border: 1px solid var(--white);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.success-msg {
+  display: none;
+  color: #86dc3d;
+}
+
+.success-msg-ssr {
+  color: #86dc3d;
 }

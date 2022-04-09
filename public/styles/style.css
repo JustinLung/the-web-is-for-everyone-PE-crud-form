@@ -1,10 +1,5 @@
 /* GLOBAL STYLES */
 
-:root {
-  --dark-grey: #171919;
-  --white: #fff;
-}
-
 body {
   background-color: #171919;
   color: #fff;
